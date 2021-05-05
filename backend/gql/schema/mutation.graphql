@@ -1,0 +1,4 @@
+type Mutation {
+    createUser(name: String!, surname: String!, email: String!, password: String!): UserResult!
+    createProduct(title: String!, price: Float!, description: String!, created_at: String!): ProductResult!
+}

@@ -1,0 +1,55 @@
+type User {
+    id: ID!
+    name: String!
+    surname: String
+    email: String!
+    password: String
+}
+
+type QueryResult {
+    success: Boolean!
+    errors: [String]
+    count: Int
+    result: [Pageable]
+    next_page: Int
+    prev_page: Int
+}
+
+type UserResult {
+    success: Boolean!
+    errors: [String]
+    user: User
+}
+
+type UsersResult {
+    success: Boolean!
+    errors: [String]
+    users: [User]
+}
+
+type Product {
+    id: ID!
+    title: String!
+    price: Float!
+    description: String!
+    created_at: String!
+    photos: [Photo]
+}
+
+type Photo {
+    uri: String!
+}
+
+type ProductsResult {
+    success: Boolean!
+    errors: [String]
+    products: [Product]
+}
+
+type ProductResult {
+    success: Boolean!
+    errors: [String]
+    product: Product
+}
+
+union Pageable = User | Product

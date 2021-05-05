@@ -1,0 +1,5 @@
+type Query {
+    users: UsersResult!
+    user: UserResult!
+    products: ProductsResult!
+}
